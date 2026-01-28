@@ -1,0 +1,62 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build
+.next/
+out/
+build/
+dist/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Testing
+coverage/
+playwright-report/
+test-results/
+
+# TypeScript
+*.tsbuildinfo
+
+# Vercel
+.vercel/
+
+# Playwright / Screenshots
+.playwright-mcp/
+playwright-report/
+test-results/
+
+# Scraped data / scripts
+scraped-data/
+scripts/
+
+# Logs folder
+logs/
+
+# Claude / AI
+.claude/
+
+# Misc
+*.md
+!README.md
+*.pem
+.cache/
+tmp/
+temp/

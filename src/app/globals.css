@@ -1,0 +1,174 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+@import "../styles/accessibility.css";
+
+@theme inline {
+  /* Colors */
+  --color-bg: var(--color-bg);
+  --color-bg-alt: var(--color-bg-alt);
+  --color-text: var(--color-text);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-tertiary: var(--color-text-tertiary);
+  --color-text-muted: var(--color-text-muted);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-border: var(--color-border);
+  --color-border-subtle: var(--color-border-subtle);
+
+  /* Fonts */
+  --font-heading: var(--font-cormorant);
+  --font-body: var(--font-inter);
+
+  /* Easing */
+  --ease-out-expo: var(--ease-out);
+  --ease-smooth: var(--ease-smooth);
+}
+
+:root {
+  /* Warm darks - not pure black */
+  --bg-dark: #111111;
+  --bg-dark-secondary: #161514;
+  --bg-dark-elevated: #1E1D1B;
+
+  /* Warm lights */
+  --bg-light: #FAF9F7;
+  --bg-light-secondary: #F5F4F2;
+
+  /* Text */
+  --text-primary: #FAFAFA;
+  --text-secondary: rgba(250, 250, 250, 0.6);
+  --text-muted: rgba(250, 250, 250, 0.3);
+
+  /* Accent - warm brass (consistent) */
+  --accent: #B8977E;
+  --accent-muted: rgba(184, 151, 126, 0.6);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-dark);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--bg-dark);
+}
+
+/* Subtle noise texture overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Custom cursor styles - hide default cursor on desktop */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+
+  a,
+  button,
+  [role="button"],
+  input,
+  textarea,
+  select,
+  .cursor-magnetic {
+    cursor: none !important;
+  }
+}
+
+/* Show default cursor on touch devices */
+@media (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+
+  a,
+  button,
+  [role="button"],
+  input,
+  textarea,
+  select,
+  .cursor-magnetic {
+    cursor: auto !important;
+  }
+}
+
+/* Stacking sections effect */
+.stacking-section {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Prevent content from overflowing rounded corners */
+.stacking-section > * {
+  border-radius: inherit;
+}
+
+/* Ensure smooth GPU-accelerated animations */
+.will-change-transform {
+  will-change: transform, opacity;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-muted);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Typography utilities for consistency */
+.text-label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.text-label-sm {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.text-accent {
+  color: var(--color-accent);
+}

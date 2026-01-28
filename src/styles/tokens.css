@@ -1,0 +1,70 @@
+:root {
+  /* Colors - Light Theme (Refined) */
+  --color-bg: #FAFAFA;              /* Slightly warm white */
+  --color-bg-alt: #F5F5F3;          /* Subtle contrast */
+  --color-text: #1A1A1A;            /* Rich black */
+  --color-text-secondary: #4A4A4A;  /* Readable secondary */
+  --color-text-tertiary: #6B6B6B;   /* Muted text */
+  --color-text-muted: #999999;      /* Very muted */
+  --color-accent: #B8977E;          /* Warm brass/gold */
+  --color-accent-hover: #A68A71;    /* Darker on hover */
+  --color-accent-light: #D4C4B0;    /* Light brass */
+  --color-border: #E8E8E6;          /* Subtle borders */
+  --color-border-subtle: #F0F0EE;   /* Very subtle borders */
+
+  /* Colors - Dark Theme (Refined) */
+  --color-bg-dark: #111111;         /* Consistent dark */
+  --color-bg-dark-alt: #141414;     /* Slight contrast */
+  --color-text-dark: #FAFAFA;       /* Warm white */
+  --color-text-dark-secondary: #CCCCCC;
+  --color-text-dark-muted: #888888;
+  --color-border-dark: #2A2A2A;
+
+  /* Typography Scale (Fluid) */
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+  --font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 1rem + 0.6vw, 1.375rem);
+  --font-size-xl: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  --font-size-2xl: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  --font-size-3xl: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+  --font-size-4xl: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+  --font-size-hero: clamp(3rem, 2rem + 6vw, 8rem);
+
+  /* Line Heights */
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-wider: 0.1em;
+  --letter-spacing-widest: 0.2em;
+
+  /* Layout */
+  --container-max: 1400px;
+  --container-padding: clamp(1.5rem, 5vw, 4rem);
+  --header-height: 80px;
+
+  /* Spacing Rhythm */
+  --space-section: clamp(6rem, 10vw, 12rem);
+  --space-block: clamp(3rem, 6vw, 6rem);
+  --space-element: clamp(1.5rem, 3vw, 3rem);
+  --space-inline: clamp(1rem, 2vw, 2rem);
+
+  /* Animation Easing */
+  --ease-smooth: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* Animation Durations */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 800ms;
+}
